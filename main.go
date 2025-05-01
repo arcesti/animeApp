@@ -9,7 +9,7 @@ import (
 func main() {
 	app := fiber.New();
 
-	routes.JinkanRoutes(app);
+	routes.Routes(app);
 
 	log.Fatal(app.Listen(":3000"));
 }
