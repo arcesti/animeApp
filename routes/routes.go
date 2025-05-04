@@ -8,6 +8,8 @@ import (
 func Routes (app *fiber.App) {
 
 	animesRoute := app.Group("/anime");
+	animesRoute.Get("/topPopular", serviceapi.GetTopAnimePopular());
+	animesRoute.Get("/topAiring", serviceapi.GetTopAnimeAiring());
 	animesRoute.Get("/:name", serviceapi.GetAnime());
 
 	personagensRoute := app.Group("/personagens");
